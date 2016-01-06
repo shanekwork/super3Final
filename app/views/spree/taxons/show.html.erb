@@ -1,0 +1,26 @@
+<div class="page-title">
+  <h2 class="taxon-title"><%= @taxon.name %></h2>
+</div>
+
+<div class="inside-content">
+  <% content_for :sidebar do %>
+    <div data-hook="taxon_sidebar_navigation">
+      <!--<%= render :partial => 'spree/shared/taxonomies' %>-->
+      <%= render :partial => 'spree/shared/filters' if @taxon.children.empty? %>
+    </div>
+  <% end %>
+
+
+
+    <% unless params[:keywords].present? %>
+      <div data-hook="taxon_children">
+      <% cache @taxon do %>
+        <%= render :partial => 'taxon', :collection => @taxon.children %>
+      <% end %>
+      </div>
+  <% end %>
+
+  <div class="taxon" data-hook="taxon_products">
+    <%= render :partial => 'spree/shared/products', :locals => { :products => @products, :taxon => @taxon } %>
+  </div>
+</div>

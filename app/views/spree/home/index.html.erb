@@ -1,0 +1,114 @@
+<div class="banner">
+    <h1>Banner ubuntu</h1>
+    <div class="pogoSlider" id="js-main-slider">      
+        <ul>
+            <li>
+                <a href="/" class="pogoSlider-slide">
+                    <img class="pogoSlider-slide-element" width="100%" src="/assets/slider1.jpg" alt="Slider2">
+                </a>
+            </li>
+            <li>
+                <a href="/" class="pogoSlider-slide">
+                    <img class="pogoSlider-slide-element" width="100%" src="/assets/slider2.jpg" alt="Slider2">
+                </a>
+            </li>
+            <li>
+                <a href="/" class="pogoSlider-slide">
+                    <img class="pogoSlider-slide-element" width="100%" src="/assets/slider3.jpg" alt="Slider2">
+                </a>
+            </li>
+        </ul>
+        <script src="/assets/jquery.pogo-slider.min.js"></script>
+    </div>
+</div>
+
+<div class="main-content">
+    <div id="categories">
+        <div class="container">
+            <div class="categories-left">
+                <a href="/t/printer-slash-fax-slash-copier-supplies/inkjet-cartridges">
+                    <img alt="cartridges" src="/assets/cartridge.jpg" />
+                    <span class="ctg-title">Cartridges</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </a>
+                <a href="/t/paper/listing-paper">
+                    <img alt="Diaries" src="/assets/diaries.jpg" />
+                    <span class="ctg-title">Diaries</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </a>
+            </div>
+            <div class="categories-right">
+                <a href="/t/furniture">
+                    <img alt="Furniture" src="/assets/furniture.jpg" />
+                    <span class="ctg-title">Furniture</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="special-sale" class="clearfix">
+        <div class="container">
+            <div class="title">
+                <h3>Sale Items</h3>
+            </div>
+            <% @products.where(special: true).each do |e| %>
+                <div class="product">                                    
+                    <div class="home_images">
+                        <%= link_to image_tag('http://www.op-insight.co.uk/images/product/large/' + e.image_name + '.jpg'), e %>
+                    </div>
+                    <div class="product-desc">
+                        <%= link_to e.short_description, e, class: 'threex3' %>
+                    </div>
+                    <div class="product-price">
+                        €<%= e.price %>
+                    </div>
+                </div>
+            <% end %>
+        </div><!--.container-->
+    </div><!--#special_sale-->
+
+    <div id="featured-latest">
+        <div class="container">
+            <div id="featured" class="clearfix">            
+                <div class="title">
+                    <h3>Featured Products</h3>
+                </div>
+                <div id="owl-carousel" class="owl-carousel">
+                    <% @products.where(featured: true).each do |e| %>
+                        <div class="product">
+                            <div class="home_images">
+                                <%= link_to image_tag('http://www.op-insight.co.uk/images/product/large/' + e.image_name + '.jpg'), e %>
+                            </div>
+                            <div class="product-desc">
+                                <%= link_to e.short_description, e, class: 'threex3' %>
+                            </div>
+                            <div class="product-price">
+                                €<%= e.price %>
+                            </div>
+                        </div>
+                    <% end %>
+                </div>
+            </div><!--#featured-->
+
+            <div id="latest" class="clearfix">
+                <div class="title">
+                    <h3>Latest Products</h3>
+                </div>
+                <% @products.where(latest: true).each do |e| %>
+                    <div class="product">
+                        <div class="home_images">
+                            <%= link_to image_tag('http://www.op-insight.co.uk/images/product/large/' + e.image_name + '.jpg'), e %>
+                        </div>
+                        <div class="product-desc">
+                            <%= link_to e.short_description, e, class: 'threex3' %>
+                        </div>
+                        <div class="product-price">
+                            €<%= e.price %>
+                        </div>
+                    </div>
+                <% end %>
+            </div><!--#featured-latest-->
+        </div><!--.container-->
+    </div><!--#featured-latest-->
+</div><!--.main-content-->

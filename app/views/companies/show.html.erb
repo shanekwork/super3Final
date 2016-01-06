@@ -1,0 +1,65 @@
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @company.address1 %>
+</p>
+<p>
+  <strong>Address2</strong>
+  <%= @company.address2 %>
+</p>
+<p>
+  <strong>Address3</strong>
+  <%= @company.address3 %>
+</p>
+
+<p>
+  <strong>Town:</strong>
+  <%= @company.town %>
+</p>
+
+<p>
+  <strong>County:</strong>
+  <%= @company.county %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @company.postcode %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @company.phone %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @company.facebook %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @company.twitter %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @company.linkedin %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @company.email %>
+</p>
+
+<p>
+  <strong>Mailer:</strong>
+  <%= @company.mailer %>
+</p>
+
+<%= link_to 'Edit Address', edit_company_path(@company) %> |
+<%= link_to 'Back to Admin Menu', '/admin/general_settings/edit' %>

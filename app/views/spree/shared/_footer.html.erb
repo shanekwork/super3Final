@@ -1,0 +1,119 @@
+<div id="footer-brands">
+    <div class="container">
+        <div class="title">
+            <h3>Our brands</h3>
+        </div>
+        <div class="brand">
+            <a href="/products?utf8=%E2%9C%93&taxon=&keywords=samsung">
+                <img alt="Samsung" src="/assets/samsung.png" />
+            </a>
+        </div>
+        <div class="brand">
+            <a href="/products?utf8=%E2%9C%93&taxon=&keywords=xerox">
+                <img alt="Xerox" src="/assets/xerox.png" />
+            </a>
+        </div>
+        <div class="brand">
+            <a href="/products?utf8=%E2%9C%93&taxon=&keywords=hp">
+                <img alt="HP" src="/assets/hp.png" />
+            </a>
+        </div>
+        <div class="brand">
+            <a href="/products?utf8=%E2%9C%93&taxon=&keywords=lexmark">
+                <img alt="Lexmark" src="/assets/lexmark.png" />
+            </a>
+        </div>
+        <div class="brand">
+            <a href="/products?utf8=%E2%9C%93&taxon=&keywords=canon">
+                <img alt="Canon" src="/assets/canon.png" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<footer id="footer" class="sixteen columns" data-hook>
+	<div id="top-footerContent">			
+		<div class="container">
+			<div class="left-footerContent">
+				<img src="/assets/store/logo-grey.png" alt="Logo">
+			</div>
+
+			<div class="right-footerContent">
+				<div class="left-fc">
+					<h3>Information</h3>
+					<div id="footer-right" class="columns omega eight" data-hook></div>	
+				</div>
+				<div class="middle-fc">
+					<h3>Contact</h3>
+					<ul>
+	   
+	                  <li>
+	                     <i class="fa fa-map-marker">&nbsp;</i>
+	                     <span><%= @c.address1 %>, <%= @c.address2 %>, <%= @c.address3 %></span>
+	                  </li>
+	   
+	                  <li>
+	                     <i class="fa fa-phone">&nbsp;</i>
+	                     <span>
+	                     		<a href="tel:<%= @c.phone %>"><%= @c.phone %></a>
+	                     </span>
+	                  </li>
+	   
+	                  <li>
+	                     <i class="fa fa-envelope-o">&nbsp;</i>
+	                     <span>
+	                        <a href="mailto:<%= @c.email %>"><%= @c.email %></a>
+	                     </span>
+	                  </li>
+
+	               </ul>
+				</div>
+
+				<div class="right-fc">
+					<h3>Newsletter</h3>
+					<p>Subscribe to the Stationery Store mailing list to receive updates on new arrivals, special offers and oher discount information</p>
+					<form id="contact_newsletter" class="form-horizontal">
+						<fieldset id="fieldNewsletter">						
+							<div> 
+								<label for="email">Email</label>
+								<input id="email-newsletter" name="email-newsletter" type="email" value="" placeholder="Enter your e-mail..." required="">
+							</div>
+								 
+							<div class="button">
+								<input id="submit" type="submit" value="">
+							</div>
+						</fieldset>
+					</form>
+
+					<div class="social">
+						<ul>
+							<li>
+								<a title="facebook" href="h<%= @c.facebook %>" target="_blank">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+
+							<li>	
+								<a title="twitter" href="<%= @c.twitter %>" target="_blank">
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+
+							<li>	
+								<a title="linkedin" href="<%= @c.linkedin %>" target="_blank">
+									<i class="fa fa-linkedin"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div><!--.container-->
+	</div><!--#top-footerContent-->
+
+	<div id="bottom-footerContent" data-hook>
+		<div class="container">
+			<p><%= Spree.t :powered_by  %> <%= link_to ' 39Bots', 'http://google.com/' %></p>
+		</div><!--.container-->
+	</div><!--#bottom-footerContent-->
+</footer>

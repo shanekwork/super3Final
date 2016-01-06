@@ -1,0 +1,15 @@
+<div class="offcanvas-menu">
+	<a class="close-offcanvas" href="#">
+		<i class="fa fa-remove"></i>
+	</a>
+	<div class="offcanvas-inner">
+		<div class="module-title">
+			<h3>
+				<span>Menus Offcanvas</span>
+			</h3>
+		</div>
+		<div class="module-content">
+			<%= render :partial => 'spree/shared/main_nav_bar' if store_menu? %>
+		</div>
+	</div>
+</div>
