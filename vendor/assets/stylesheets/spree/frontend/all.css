@@ -133,7 +133,6 @@ ul#main-nav-bar li ul li ul {
 }
 
 ul#main-nav-bar li ul li:hover ul {
-	display: block !important;
 	margin: 0 0 0 0;
 }
 
