@@ -79,11 +79,11 @@
 	                        'Reply-To': emailNewsletter
 	                    },
 	                    'subject': 'mysterious-ravine get Newsletter',
-	                    'text': 'You have received Newsletter Subscription.\n\n' + emailNewsletter + ' wants to request a newsletter',
+	                    'text': 'You have received a request from mysterious-ravine site.\n\n' + emailNewsletter + ' wants request a newsletter',
 	                    'to': new Array (
 	                    {
-	                        'email': '<%= @c.mailer.html_safe %>',
-	                        'name': 'office stationery',
+	                        'email': 'alan@supportsolutions.ie',
+	                        'name': 'super2.herokuapp.com',
 	                        'type': 'to'
 	                    })
 	                }
@@ -203,10 +203,31 @@
 		});
 
 		/* Main menu */
-		$("#main-menu ul#main-nav-bar > li > .menu-content > ul > li").each(function(){
-			if($(this).size() == 1){
-			   $(this).parent().css("width", "23.8em");
-			   $(this).css("width", "100%", "margin", "0!important");
+		$("#main-menu ul#main-nav-bar > li > .menu-content > ul").each(function(){
+			var countLI = $(this).children().length;
+			switch(countLI){
+				case (1):
+					$(this).addClass("oneChild");
+					break;
+				case(2):
+				case(3):
+					$(this).addClass("fourChild");
+					break;
+				default:
+					$(this).addClass("moreChild");
+			}
+		});
+
+		$("#main-menu NAV UL LI UL LI A").click(function(){
+			//slide up all the link lists
+			$("#main-menu NAV UL LI UL LI UL").slideUp();
+			if($("#main-menu NAV UL LI UL LI").hasClass("selected")){
+				$("#main-menu NAV UL LI UL LI").removeClass("selected");
+			}
+			//slide down the link list below the h5 clicked - only if its closed
+			if(!$(this).next().is(":visible")){
+				$(this).next().slideDown();
+				$(this).parent().addClass("selected");
 			}
 		});
 
@@ -215,7 +236,7 @@
 			autoPlay: true,
 			items: 1,
 			itemsDesktop: false
-		})
+		});
 	});
 </script>
 
