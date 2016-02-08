@@ -767,22 +767,6 @@ body{
 							font-family:"FontAwesome";
 							margin:0 0 0 0.8em;
 							}
-							#main-menu NAV UL LI A.selected,
-							#main-menu NAV UL LI:hover A,
-							#main-menu NAV UL LI:hover UL LI A.selected{
-								color:#ec4445!important;
-								}
-								#main-menu NAV UL LI A:hover{
-									background:none!important;
-									}
-							#main-menu NAV UL LI.selected,
-							#main-menu NAV UL LI.selected:hover{
-								background:#f0f0f0!important;
-								}
-								#main-menu NAV UL LI.selected A,
-								#main-menu NAV UL LI.selected:hover A{
-									color:#ec4445!important;
-									}
 						#main-menu NAV UL LI .menu-content{
 							clear:both;
 							display:block;
@@ -893,6 +877,22 @@ body{
 								position:fixed;
 								right:6.1em;
 								}
+							#main-menu NAV UL LI A.selected,
+							#main-menu NAV UL LI:hover A,
+							#main-menu NAV UL LI:hover UL LI A.selected{
+								color:#ec4445!important;
+								}
+								#main-menu NAV UL LI A:hover{
+									background:none!important;
+									}
+							#main-menu NAV UL LI.selected,
+							#main-menu NAV UL LI.selected:hover{
+								background:#f0f0f0!important;
+								}
+								#main-menu NAV UL LI.selected A,
+								#main-menu NAV UL LI.selected:hover A{
+									color:#ec4445!important;
+									}
 		#wrapper .container{
 			overflow:hidden;
 			}			
