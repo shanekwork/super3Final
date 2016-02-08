@@ -877,9 +877,8 @@ body{
 								position:fixed;
 								right:6.1em;
 								}
-							#main-menu NAV UL LI A.selected,
-							#main-menu NAV UL LI:hover A,
-							#main-menu NAV UL LI:hover UL LI A.selected{
+							#main-menu NAV UL LI:hover > A,
+							#main-menu NAV UL LI:hover UL LI.selected > A{
 								color:#ec4445!important;
 								}
 								#main-menu NAV UL LI A:hover{
