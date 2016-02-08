@@ -2141,6 +2141,9 @@ body{
 										#content #checkout .row .columns FORM .inner P{
 											margin:0 0 0.3em 0;
 											}
+										#content #checkout .row .columns FORM .inner P#bstate{
+											display:none;
+											}
 											#content #checkout .row .columns FORM .inner LABEL{
 												font-family:Verdana,helvetica,sans-serif;
 												font-size:0.75em;
@@ -2172,6 +2175,15 @@ body{
 											padding:0 0.85em;
     										width:93%;
 											}
+								#content #checkout .row .columns FORM FIELDSE.payment{
+									border:none;
+								    margin:0;
+								    padding:0;
+									}
+									#content #checkout .row .columns FORM FIELDSET#payment .inner .label-field{
+										float:lef;
+										width:100%;
+										}
 							#content #checkout .row .columns FORM#checkout_form_delivery,
 							#content #checkout .row .columns FORM#checkout_form_payment{
 								min-height:auto;
@@ -2343,6 +2355,9 @@ body{
 								#content #checkout .row .columns FORM .columns.omega P{
 									margin:0 0 1em 0;
 									padding:0;
+									}
+								#content #checkout .row .columns FORM .columns.omega P#sstate{
+									display:none;
 									}
 									#content #checkout .row .columns FORM .columns.omega P INPUT{
 										width:100%;
@@ -2893,7 +2908,9 @@ body{
 							.offcanvas-menu .offcanvas-inner .module-content #main-nav-bar LI:hover UL{
 								border:none;
 								border-top:1px dotted #e8e8e8;
+								box-shadow:none;
 								left:0;
+								padding:0;
 								position:relative;
 								width:100%;
 								}
@@ -2910,6 +2927,136 @@ body{
 									.offcanvas-menu .offcanvas-inner .module-content #main-nav-bar LI UL LI UL LI A:hover{
 										background:none!important;
 										}
+	FIELDSET#order_summary{
+		border:none;
+		}
+		FIELDSET#order_summary #order{
+			float:left;
+		    margin:0;
+		    width:100%;
+			}
+			FIELDSET#order_summary .steps-data{
+				float: left;
+				width: 100%;
+				}
+				FIELDSET#order_summary .steps-data DIV.columns{
+					border:1px solid #dddddd;
+				    float:left;
+				    margin:0 0.5em 1.2em 0.5em;
+				    padding:0;
+				    width:48.2%;
+					}
+					FIELDSET#order_summary .steps-data DIV.columns H6,
+					FIELDSET#order_summary .steps-data DIV.columns .address,
+					FIELDSET#order_summary .steps-data DIV.columns .delivery,
+					FIELDSET#order_summary .steps-data DIV.columns .payment-info{
+						float:left;
+					    padding:0 1em;
+					    width:94.2%;
+						}					
+					FIELDSET#order_summary .steps-data DIV.columns DIV IMG{
+					    width:auto;
+						}
+					FIELDSET#order_summary .steps-data DIV.columns DIV > DIV{
+					    color:#252525;
+					    font-family:Verdana,helvetica,sans-serif;
+    					font-size:0.9em;
+						}
+						FIELDSET#order_summary .steps-data DIV.columns DIV > DIV DIV,
+						FIELDSET#order_summary .steps-data DIV.columns DIV > DIV SPAN{
+	    					font-size:1em;
+							}
+					FIELDSET#order_summary .steps-data DIV.columns H6{
+						background:#fafafa;
+						color:#252525;
+					    font-family:Verdana,helvetica,sans-serif;
+					    font-size:0.75em;
+					    padding:0.45em 1em;
+					    width:95.5%;
+						}
+					FIELDSET#order_summary .steps-data DIV.columns .address,
+					FIELDSET#order_summary .steps-data DIV.columns .delivery,
+					FIELDSET#order_summary .steps-data DIV.columns .payment-info{
+						min-height:10em;
+						}
+			FIELDSET#order_summary #line-items{
+				border:1px solid #dddddd;
+				float:left;
+				width:99.9%;
+				}
+				FIELDSET#order_summary #line-items THEAD TH{
+					font-family:Verdana,helvetica,sans-serif;
+					font-size:0.75em;
+					}
+				FIELDSET#order_summary #line-items TBODY TD{
+					border:none;
+				    color:#252525;
+				    font-family:Verdana,helvetica,sans-serif;
+				    font-size:0.75em;
+				    text-transform:uppercase;
+					}
+					FIELDSET#order_summary #line-items TBODY TD H4{
+					    color:#252525;
+						}
+				FIELDSET#order_summary #line-items TBODY TD.price,
+				FIELDSET#order_summary #line-items TBODY TD.qty,
+				FIELDSET#order_summary #line-items TBODY TD.total,
+				FIELDSET#order_summary #line-items TFOOT#order-total TD,
+				FIELDSET#order_summary #line-items TFOOT#subtotal TD{
+				    color:#777777;
+				    font-weight:normal;
+				    font-size:0.8em;
+				    text-align:right;
+					}
+					FIELDSET#order_summary #line-items TBODY TD.price SPAN,
+					FIELDSET#order_summary #line-items TBODY TD.total SPAN,
+					FIELDSET#order_summary #line-items TFOOT#order-total TD SPAN,
+					FIELDSET#order_summary #line-items TFOOT#subtotal TD SPAN,
+					FIELDSET#order_summary #line-items TFOOT#tax-adjustments TD SPAN,
+					FIELDSET#order_summary #line-items TFOOT#shipment-total TD SPAN,
+					FIELDSET#order_summary #line-items TFOOT#order-charges TD SPAN{
+					    color:#777777;
+					    font-family:Verdana,helvetica,sans-serif;
+					    font-size:1em;
+					    font-weight:normal;
+						}
+					FIELDSET#order_summary #line-items TBODY TD.total SPAN,
+					FIELDSET#order_summary #line-items TFOOT#order-total TD.total SPAN{
+					    color:#fe5252;
+						}
+				FIELDSET#order_summary #line-items TBODY TD.qty,
+				FIELDSET#order_summary #line-items TBODY TD.total,
+				FIELDSET#order_summary #line-items TFOOT#order-total TD,
+				FIELDSET#order_summary #line-items TFOOT#subtotal TD,
+				FIELDSET#order_summary #line-items TFOOT#tax-adjustments TD,
+				FIELDSET#order_summary #line-items TFOOT#shipment-total TD,
+				FIELDSET#order_summary #line-items TFOOT#order-charges TD{
+				    font-family:Verdana,helvetica,sans-serif;
+				    font-size:0.8em;
+				    font-weight:normal;
+				    text-align:right;
+				    text-transform:uppercase;
+					}
+				FIELDSET#order_summary #line-items TBODY TD.qty{
+					text-align:center;
+					}
+	#checkout .inside-content FIELDSET#payment .inner .card_options{
+		float:left;
+	    margin:0 0 1em 0;
+	    width:100%;
+		}
+		#content #checkout .row .columns FORM .inner .card_options INPUT{
+		    clear:left;
+		    float:left;
+		    margin:0 0.3em 1em 0;
+		    width:auto;
+			}
+		#content #checkout .row .columns FORM .inner .card_options LABEL{
+		    clear:right;
+		    float:left;
+		    margin:0 0 1em;
+		    width:auto;
+			}
 
 /* GOOGLE CHROME & SAFARI */
 @media screen and (-webkit-min-device-pixel-ratio:0){
