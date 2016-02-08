@@ -888,7 +888,6 @@ body{
 							#main-menu NAV UL LI.selected:hover{
 								background:#f0f0f0!important;
 								}
-								#main-menu NAV UL LI.selected A,
 								#main-menu NAV UL LI.selected:hover A{
 									color:#ec4445!important;
 									}
